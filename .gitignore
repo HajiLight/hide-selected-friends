@@ -1,0 +1,22 @@
+node_modules/
+.vencord/
+dist/
+coverage/
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.*
+tsconfig.check.json
+
+# Local settings, exports, and internal notes (never commit)
+settings.json
+settings.json.bak
+messages-*.jsonl
+messages-*.txt
+*.jsonl
+docs/open-questions.md
+docs/redteam-brief.md
+*.tmp
+*.crdownload
+*.bak

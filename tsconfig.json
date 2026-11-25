@@ -1,0 +1,76 @@
+{
+    "compilerOptions": {
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "skipLibCheck": false,
+        "allowJs": true,
+        "lib": [
+            "DOM",
+            "DOM.Iterable",
+            "esnext",
+            "esnext.array",
+            "esnext.asynciterable",
+            "esnext.symbol"
+        ],
+        "module": "esnext",
+        "moduleResolution": "bundler",
+        "strict": true,
+        "noImplicitAny": false,
+        "target": "ESNEXT",
+        "jsx": "preserve",
+        "noEmit": true,
+        "types": [
+            "node",
+            "standalone-electron-types"
+        ],
+        "paths": {
+            "@main/*": [
+                "./.vencord/src/main/*"
+            ],
+            "@api/*": [
+                "./.vencord/src/api/*"
+            ],
+            "@components/*": [
+                "./.vencord/src/components/*"
+            ],
+            "@debug/*": [
+                "./.vencord/src/debug/*"
+            ],
+            "@utils/*": [
+                "./.vencord/src/utils/*"
+            ],
+            "@plugins/*": [
+                "./.vencord/src/plugins/*"
+            ],
+            "@shared/*": [
+                "./.vencord/src/shared/*"
+            ],
+            "@webpack/common": [
+                "./.vencord/src/webpack/common"
+            ],
+            "@webpack/common/*": [
+                "./.vencord/src/webpack/common/*"
+            ],
+            "@webpack": [
+                "./.vencord/src/webpack/webpack"
+            ],
+            "@webpack/patcher": [
+                "./.vencord/src/webpack/patchWebpack"
+            ],
+            "@webpack/wreq.d": [
+                "./.vencord/src/webpack/wreq.d"
+            ],
+            "@webpack/types": [
+                "./.vencord/src/webpack/types"
+            ]
+        }
+    },
+    "include": [
+        "*.ts",
+        "tests/**/*.ts",
+        ".vencord/src/globals.d.ts",
+        ".vencord/src/modules.d.ts",
+        ".vencord/src/nativeModules.d.ts"
+    ]
+}

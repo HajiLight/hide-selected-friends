@@ -1,0 +1,66 @@
+name: Bug report
+description: The plugin is missing, does nothing, or throws
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before filing: is **HideSelectedFriends** listed in *Settings → Vencord → Plugins*?
+        If it is not, the build never included it — that is an install problem, not a bug.
+
+        Never paste your Discord token, cookies, login data or hidden user IDs. The console output
+        and the Discord build number are enough.
+
+  - type: input
+    id: plugin_version
+    attributes:
+      label: Plugin version
+      description: "From package.json / the Vencord plugin card"
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: discord-build
+    attributes:
+      label: Discord build number
+      description: "Discord console (`Ctrl+Shift+I`), run `GLOBAL_ENV.BUILD_NUMBER`."
+      placeholder: "123456789"
+    validations:
+      required: true
+
+  - type: input
+    id: vencord-commit
+    attributes:
+      label: Vencord commit
+      description: "`git -C Vencord rev-parse --short HEAD`"
+      placeholder: "795ed0ff"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: client
+    attributes:
+      label: Client
+      options:
+        - Discord Stable (injected)
+        - Discord Canary (injected)
+        - Vesktop
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect, and what happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Console output
+      description: Anything starting with `Patch by HideSelectedFriends` or an error from the plugin.
+      render: shell
